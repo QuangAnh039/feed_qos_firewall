@@ -1,0 +1,11 @@
+--- a/src/netmodel.c    Thu Feb 20 11:45:06 2025
++++ b/src/netmodel.c    Tue Feb 18 14:38:31 2025
+@@ -285,7 +285,7 @@
+ }
+
+ // assumes firewall_interface_t* is never NULL
+-bool to_linux_interface_dual_query(const char* netmodel_interface, int ipversion, firewall_interface_t* fwiface, firewall_interface_t* v6_fwiface) {
++bool to_linux_interface_dual_query(const char* netmodel_interface, ipversion_t ipversion, firewall_interface_t* fwiface, firewall_interface_t* v6_fwiface) {
+     if(netmodel_interface == NULL) {
+         init_firewall_interface(fwiface);
+         init_firewall_interface(v6_fwiface);
